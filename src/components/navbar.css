@@ -32,7 +32,8 @@
   
 }
 
-.navtitle {
+#navtitle {
+  text-decoration: none;
   align-items: center;
   color: white;
   display: inline-block;

@@ -11,15 +11,10 @@ export const Navbar = () => {
           <Storefront size={40} />
         </Link>
       </div>
-      <div className="navtitle">
-        <h1>RohanShop.com</h1>
-      </div>
+        <Link id="navtitle" to="/"><h1>RohanShop.com</h1></Link>
       <div className="linkscart">
         <Link to="/cart">
           <ShoppingCart size={32} />
-        </Link>
-        <Link to="/">
-          <b>Cart</b>
         </Link>
       </div>
     </div>

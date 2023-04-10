@@ -8,7 +8,7 @@
 } */
 
 .linksshop {
-  margin-right: 40px;
+  margin-right: 50px;
   display: flex;
   align-items: center;
 }
@@ -20,7 +20,7 @@
 }
 
 .linkscart {
-  margin-left: 40px;
+  margin-left: 50px;
   display: flex;
   align-items: center;
 }

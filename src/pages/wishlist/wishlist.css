@@ -1,34 +1,27 @@
-.cart {
+.wishlist {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.cartItem img {
+.wishlistItem img {
   width: 180px;
   height: inherit;
 }
 
-.cartItem .description {
+.wishlistItem .description {
   margin-left: 40px;
   width: 100%;
   font-size: 30px;
-}
-
-.countHandler input {
-  width: 60px;
-  text-align: center;
-  font-weight: bolder;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: large;
 }
 
 .countHandler button {
   background-color: darkblue;
   color: white;
   font-size: large;
+  margin: 4px;
+  border-radius: 12px;
 }
 
 .continueShopping button {
@@ -43,7 +36,7 @@
 }
 
 @media screen and (min-width: 550px) {
-  .cartItem {
+  .wishlistItem {
     width: 700px;
     height: 250px;
     display: flex;
@@ -54,9 +47,9 @@
 }
 
 @media screen and (max-width: 992px) {
-  .cartItem {
+  .wishlistItem {
     width: 400px;
-    height: 320px;
+    height: 360px;
     display: flex;
     align-items: center;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
@@ -64,7 +57,7 @@
   }
 }
 
-.cart h1 {
+.wishlist h1 {
   font-size: 50px;
   font-weight: 600;
   background-image: linear-gradient(to left, #171054, #616188);

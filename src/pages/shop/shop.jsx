@@ -15,7 +15,7 @@ export const Shop = () => {
   return (
     <div className="shop">
       <div className="shopTitle">
-        <h1>Our Products</h1>
+        <h1>PRODUCTS</h1>
       </div>
       <div className="toprightbtn">
         <button onClick={gotocart}>Cart</button>

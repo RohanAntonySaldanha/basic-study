@@ -11,8 +11,17 @@ const getDefaultCart = () => {
   return cart;
 };
 
+const getDefaultWishlist = () => {
+  let wishlist = {};
+  for (let i = 1; i < PRODUCTS.length + 1; i++) {
+    wishlist[i] = 0;
+  }
+  return wishlist;
+};
+
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [wishlistItems, setWishlistItems] = useState(getDefaultWishlist());
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -37,17 +46,30 @@ export const ShopContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
   };
 
+  const addToWishlist = (itemId) => {
+    setWishlistItems((prev) => ({ ...prev, [itemId]: 1 }));
+    console.log(itemId);
+  };
+
+  const removeFromWishlist = (itemId) => {
+    setWishlistItems((prev) => ({ ...prev, [itemId]: 0 }));
+    console.log(itemId);
+  };
+
   const checkout = () => {
     setCartItems(getDefaultCart());
   };
 
   const contextValue = {
     cartItems,
+    wishlistItems,
     addToCart,
     updateCartItemCount,
     removeFromCart,
     getTotalCartAmount,
     checkout,
+    addToWishlist,
+    removeFromWishlist,
   };
 
   return (

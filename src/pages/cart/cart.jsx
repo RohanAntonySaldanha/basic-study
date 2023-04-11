@@ -34,12 +34,14 @@ export const Cart = () => {
               navigate("/checkout");
             }}
           >
-            {" "}
-            Checkout{" "}
+            Checkout
           </button>
         </div>
       ) : (
-        <h1>* Empty *</h1>
+        <div className="checkout">
+          <h1>* Empty *</h1>
+          <button onClick={() => navigate("/")}> Continue Shopping </button>
+        </div>
       )}
     </div>
   );

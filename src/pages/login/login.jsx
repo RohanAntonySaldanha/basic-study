@@ -49,6 +49,8 @@ export const Login = () => {
             </div>
           </div>
           <button className="btn btn-warning">Login</button>
+          <h4>* email : rahul@gmail.com *</h4>
+          <h4>* password : 13579 *</h4>
         </form>
       )}
     </div>

@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 export const Shop = () => {
   const navigate=useNavigate();
-  const gotowishlist=(e)=>{
+  const gotoWishList=(e)=>{
     navigate("/wishlist");
   }
-  const gotocart=(e)=>{
+  const gotoCart=(e)=>{
     navigate("/cart");
   }
   return (
@@ -18,8 +18,8 @@ export const Shop = () => {
         <h1>PRODUCTS</h1>
       </div>
       <div className="toprightbtn">
-        <button onClick={gotocart}>Cart</button>
-        <button onClick={gotowishlist}>Wishlist</button>
+        <button onClick={gotoCart}>Cart</button>
+        <button onClick={gotoWishList}>Wishlist</button>
       </div>
       <div className="products">
         {PRODUCTS.map((product) => (

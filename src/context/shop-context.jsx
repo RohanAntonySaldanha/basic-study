@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
@@ -34,6 +34,14 @@ export const ShopContextProvider = (props) => {
     return totalAmount;
   };
 
+  const clearCart = () => {
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        setCartItems((prev) => ({ ...prev, [item]: 0 }));
+      }
+    }
+  };
+
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
@@ -48,15 +56,13 @@ export const ShopContextProvider = (props) => {
 
   const addToWishlist = (itemId) => {
     setWishlistItems((prev) => ({ ...prev, [itemId]: 1 }));
-    console.log(itemId);
   };
 
   const removeFromWishlist = (itemId) => {
     setWishlistItems((prev) => ({ ...prev, [itemId]: 0 }));
-    console.log(itemId);
   };
 
-  const checkout = () => {
+  const checkoutDefault = () => {
     setCartItems(getDefaultCart());
   };
 
@@ -67,9 +73,10 @@ export const ShopContextProvider = (props) => {
     updateCartItemCount,
     removeFromCart,
     getTotalCartAmount,
-    checkout,
+    checkoutDefault,
     addToWishlist,
     removeFromWishlist,
+    clearCart,
   };
 
   return (

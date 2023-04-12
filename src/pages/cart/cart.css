@@ -10,21 +10,6 @@
   height: inherit;
 }
 
-/* .cartItem .description {
-  margin-left: 40px;
-  width: 100%;
-  font-size: 30px;
-} */
-
-/* .countHandler input {
-  width: 60px;
-  text-align: center;
-  font-weight: bolder;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: large;
-} */
-
 .countHandler button {
   background-color: darkblue;
   color: white;
@@ -122,15 +107,6 @@
   -webkit-background-clip: text;
 }
 
-/* .checkout p {
-  font-size: 50px;
-  font-weight: 600;
-  background-image: linear-gradient(to left, #171054, #616188);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-} */
-
 @media screen and (min-width: 481px) {
   .checkout p {
     font-size: 50px;
@@ -152,7 +128,6 @@
     -webkit-background-clip: text;
   }
 }
-
 
 .checkout button {
   appearance: none;

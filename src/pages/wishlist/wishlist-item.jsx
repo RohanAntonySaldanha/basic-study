@@ -3,7 +3,7 @@ import { ShopContext } from "../../context/shop-context";
 
 export const WishlistItem = (props) => {
   const { id, productName, price, productImage } = props.data;
-  const { removeFromWishlist,addToCart, cartItems } = useContext(ShopContext);
+  const { removeFromWishlist, addToCart, cartItems } = useContext(ShopContext);
 
   const cartItemCount = cartItems[id];
 

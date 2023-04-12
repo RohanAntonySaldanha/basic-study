@@ -22,10 +22,10 @@ export const Wishlist = () => {
           }
         })}
       </div>
-        <div className="continueShopping">
-          <button onClick={() => navigate("/")}> Products </button>
-          <button onClick={() => navigate("/cart")}>Cart</button>
-        </div>
+      <div className="continueShopping">
+        <button onClick={() => navigate("/")}> Products </button>
+        <button onClick={() => navigate("/cart")}>Cart</button>
+      </div>
     </div>
   );
 };

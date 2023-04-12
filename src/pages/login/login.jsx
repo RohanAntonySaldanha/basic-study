@@ -1,15 +1,8 @@
 import React, { useRef } from "react";
-// import { useNavigate } from "react-router-dom";
-import {Checkout} from "../checkout/checkout";
+import { Checkout } from "../checkout/checkout";
 import "./login.css";
 
 export const Login = () => {
-  // const navigate = useNavigate();
-  // const [data, setEmail] = useState(null);
-  // function getEmail(val) {
-  //   setEmail(val.target.value);
-  // }
-
   const email = useRef();
   const password = useRef();
   const getEmail = localStorage.getItem("emailData");
@@ -28,7 +21,7 @@ export const Login = () => {
   return (
     <div className="container">
       {getEmail && getPassword ? (
-        <Checkout passLogin={1} passEmail={"rahul@gmail.com"}/>
+        <Checkout passLogin={1} passEmail={"rahul@gmail.com"} />
       ) : (
         <form onSubmit={handleSubmit}>
           <div>

@@ -49,11 +49,16 @@ export const Checkout = (props) => {
                 <MDBInput label="Company name" type="text" className="mb-4" />
                 <MDBInput label="Address" type="text" className="mb-4" />
                 {emailValue ? (
-                  <MDBInput label="Email" type="text" className="mb-4" value={emailValue}/>
+                  <MDBInput
+                    label="Email"
+                    type="text"
+                    className="mb-4"
+                    value={emailValue}
+                  />
                 ) : (
                   <MDBInput label="Email" type="text" className="mb-4" />
                 )}
-                
+
                 <MDBInput label="Phone" type="text" className="mb-4" />
                 <MDBTextArea
                   label="Additional information"
